@@ -45,7 +45,7 @@ class DataGenerator:
         else:
             noise_scales = None
         if description.noise in ['gp-add', 'mim', 'mlp', 'gp', 'gp-add-lach']:
-            data = utils.simulate_nonlinear_sem(W_true,
+            data = utils.simulate_nonlinear_sem(B_true,
                                              description.n_obs,
                                              sem_type=description.noise,
                                              noise_scale=noise_scales)
