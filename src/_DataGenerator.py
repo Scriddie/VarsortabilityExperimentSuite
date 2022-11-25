@@ -38,17 +38,17 @@ class DataGenerator:
         """ Create sample for dataset """
         if self.random_seed:
             utils.set_random_seed(description.random_seed)
-        B_true = np.where(W_true!=0, 1, 0)
         if description.noise_variance:
             l, u = description.noise_variance
             noise_scales = np.random.uniform(l, u, size=description.n_nodes)
         else:
             noise_scales = None
+        B_true = np.where(W_true!=0, 1, 0)
         if description.noise in ['gp-add', 'mim', 'mlp', 'gp', 'gp-add-lach']:
-            data = utils.simulate_nonlinear_sem(W_true,
-                                             description.n_obs,
-                                             sem_type=description.noise,
-                                             noise_scale=noise_scales)
+            data = utils.simulate_nonlinear_sem(B_true,
+                                                description.n_obs,
+                                                sem_type=description.noise,
+                                                noise_scale=noise_scales)
         else:
             data = utils.simulate_linear_sem(W_true, 
                                              description.n_obs,
