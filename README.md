@@ -1,4 +1,7 @@
+**[Update 09/2023]** Our new library [CausalDisco](https://causaldisco.github.io/CausalDisco/) provides the SortnRegress baseline algorithm, an implementation of var-sortability, as well as a [new scale-invariant version](https://arxiv.org/abs/2303.18211) of both in a single python package for causal discovery benchmarking.
+
 # Content
+
 This repository comprises the **basic experimental set-up for the comparison of causal structure learning algorithms** as shown in
 
 [1] Reisach, A. G., Seiler, C., & Weichwald, S. (2021). [Beware of the Simulated DAG! Causal Discovery Benchmarks May Be Easy To Game](https://proceedings.neurips.cc/paper/2021/file/e987eff4a7c7b7e580d659feb6f60c1a-Paper.pdf).
